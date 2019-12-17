@@ -7,7 +7,7 @@ Simple Hello World  HTTP Server
 ```golang
 go build
 ```
-## Run - default port 5000
+## Run - default port 5050
 
 ```golang
 go-http-server
