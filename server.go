@@ -20,12 +20,16 @@ const (
 
 var (
 	listenAddr string
+	listenHost string
+	listenPort string
 	healthy    int32
 )
 
 func main() {
-	flag.StringVar(&listenAddr, "listen-addr", ":5050", "server listen address")
+	flag.StringVar(&listenHost, "listen-host", "localhost", "server host address")
+	flag.StringVar(&listenPort, "listen-port", "5050", "server listen port")
 	flag.Parse()
+	listenAddr = listenHost + ":" + listenPort
 
 	logger := log.New(os.Stdout, "http: ", log.LstdFlags)
 	logger.Println("Server is starting...")

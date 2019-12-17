@@ -1,8 +1,8 @@
 # go-http-server
 
-Simple Hello World  HTTP Server 
+Simple Hello World  HTTP Server
 
-## Build 
+## Build
 
 ```golang
 go build
@@ -10,11 +10,11 @@ go build
 ## Run - default port 5050
 
 ```golang
-go-http-server
+./server
 ```
 
-## Run - address and port specified
+## Run - host and port specified
 
 ```golang
-go-http-server --listenAddr localhost:8080
+./server --listen-host 127.0.0.1 --listen-port 8080
 ```
