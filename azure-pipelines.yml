@@ -44,5 +44,5 @@ steps:
   inputs:
     repository: $(imageName)
     command: build
-    Dockerfile: Dockerfile
-    buildContext: $(Build.Repository.LocalPath)
+    #Dockerfile: Dockerfile
+    #buildContext: $(Build.Repository.LocalPath)
