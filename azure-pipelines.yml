@@ -44,5 +44,12 @@ steps:
   inputs:
     repository: $(imageName)
     command: build
-    #Dockerfile: Dockerfile
-    #buildContext: $(Build.Repository.LocalPath)
+- task: Docker@2
+  displayName: Push image
+  inputs:
+    containerRegistry: |
+      $(dockerHub)
+    repository: $(imageName)
+    command: push
+    tags: |
+      $(imageName)
