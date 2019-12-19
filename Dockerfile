@@ -19,8 +19,8 @@ WORKDIR /app
 # executable of our Go program
 RUN go build -o server .
 
-# Expose port 5050 to the outside world
-EXPOSE 5050
+# Expose port 8080 to the outside world
+EXPOSE 8080
 
 # Command to run the executable
-CMD ["/app/server"]
+CMD ["/app/server", "--listen-host",  "0.0.0.0", "--listen-port", "8080"]
